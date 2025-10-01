@@ -5,15 +5,15 @@ const path = require('path');
 // -------------------
 // Finale credentials
 // -------------------
-const finaleApiKey = os.getenv("PAYLINK_API_KEY");
-const finaleApiSecret = os.getenv("PAYLINK_SECRET_ID");
+const finaleApiKey = process.env.PAYLINK_API_KEY;
+const finaleApiSecret = process.env.PAYLINK_SECRET_ID;
 const finaleAuth = Buffer.from(`${finaleApiKey}:${finaleApiSecret}`).toString('base64');
 
 // -------------------
 // Shopify credentials
 // -------------------
-const shopifyDomain = os.getenv("SHOPIFY_DOMAIN");
-const shopifyToken = os.getenv("SHOPIFY_KEY");
+const shopifyDomain = process.env.SHOPIFY_DOMAIN;
+const shopifyToken = process.env.SHOPIFY_KEY;
 
 // -------------------
 // Fetch all Shopify variants (paginated)
